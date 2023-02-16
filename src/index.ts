@@ -74,16 +74,18 @@ bot.hears("UZB", async (ctx: TypeBot) => {
 });
 
 bot.hears(["Sotib olish", "buy"], async (ctx: TypeBot) => {
-	await ctx.reply(ctx.t("buy_word"), {
-		reply_markup: {
-			inline_keyboard: [
-				[{ text: "Sotib olish", url: "https://t.me/Sugurtabozor_bot" }],
-				[{ text: "Orqaga", callback_data: "back" }],
-			],
-			one_time_keyboard: true,
-			resize_keyboard: true,
-		},
-	});
+	await ctx.reply(
+		`${ctx.t("buy_word")}
+		https://t.me/Sugurtabozor_bot
+	`,
+		{
+			reply_markup: {
+				keyboard: [[{ text: "Orqaga" }]],
+				one_time_keyboard: true,
+				resize_keyboard: true,
+			},
+		}
+	);
 });
 
 bot.hears(["Orqaga", "back"], async (ctx: TypeBot) => {
