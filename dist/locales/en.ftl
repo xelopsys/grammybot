@@ -1,0 +1,2 @@
+after_greeting=choose another language
+choose_another_language=choose another language
